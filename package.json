@@ -11,8 +11,7 @@
   },
   "scripts": {
   	"start": "node ./cli.js start",
-  	"prepublish": "webpack",
-  	"run": "node ./server.js start"
+  	"prepublish": "webpack"
   },
   "dependencies": {
   	"async": "^1.4.0",
