@@ -1,8 +1,6 @@
 var React = require('react/addons');
 var Container = require('flux/utils').Container;
 
-var appHistory = require('../routes/appHistory');
-
 var AppUI = React.createClass({
     propTypes: {
     },
