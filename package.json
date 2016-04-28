@@ -23,10 +23,12 @@
     "hapi": "^10.1.0",
     "hapi-auth-jwt": "^2.1.2",
     "hyperquest": "^1.0.1",
+    "memory-cache": "^0.1.5", 
     "q": "^1.2.0",
     "react": "^0.13.3",
     "react-input-placeholder": "^1.2.0",
     "react-router": "1.0.0-rc4",
+    "rwlock": "4.0.0",
     "superagent": "1.4.0"
   },
   "devDependencies": {
