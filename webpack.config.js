@@ -6,7 +6,9 @@ var commonsPlugin =
 
 var config = {
     entry: {
-        app: './client/basic.js'
+        app: './client/basic.js',
+        
+        'index.html': './client/index.html'
     },
 
     output: {
@@ -28,7 +30,8 @@ var config = {
     module: {
         loaders: [
             { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
-            { test: /\.json$/, loader: 'json-loader' }
+            { test: /\.json$/, loader: 'json-loader', exclude: /node_modules/ },
+            { test: /\.(html)$/, loader: 'file-loader?name=[name].[ext]', exclude: /node_modules/ }
         ]
     },
 

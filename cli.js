@@ -16,9 +16,6 @@ program
 
         spawn(nodemon, ['server/index.js'],
             { stdio: 'inherit', env: Object.assign(process.env, { HOST: 'localhost', PORT: 8888 }) });
-
-        spawn(npm, ['run'],
-            { stdio: 'inherit', env: Object.assign(process.env, { HOST: 'localhost', PORT: 8889 }) });
     });
 
 program.parse(process.argv);
