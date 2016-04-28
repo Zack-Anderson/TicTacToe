@@ -17,15 +17,6 @@ var config = {
         path: './build',
         publicPath: '/'
     },
-    plugins: [
-        commonsPlugin,
-        new webpack.DefinePlugin({
-            'process.env': {
-                NODE_ENV: JSON.stringify(process.env.NODE_ENV),
-                DEV_BOX: JSON.stringify(process.env.DEV_BOX)
-            }
-        })
-    ],
 
     module: {
         loaders: [
@@ -36,21 +27,11 @@ var config = {
     },
 
     devServer: {
-        port: 8887,
+        port: process.env.PORT,
         publicPath: '/',
-        host: 'localhost',
+        host: process.env.HOST,
         stats: 'minimal'
     }
 };
-
-if (process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging') {
-    config.plugins.push(new webpack.optimize.UglifyJsPlugin({
-        compress: {
-            warnings: false
-        }
-    }));
-}
-
-console.log('node_env: ' + process.env.NODE_ENV); //eslint-disable-line
 
 module.exports = config;

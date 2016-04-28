@@ -12,7 +12,7 @@ program
     .command('start')
     .action(() => {        
         spawn(webpackDevServer, ['--hot', '--inline', '--no-info'],
-            { stdio: 'inherit' });
+            { stdio: 'inherit', env: Object.assign(process.env, { HOST: 'localhost', PORT: 8887 }) });
 
         spawn(nodemon, ['server/index.js'],
             { stdio: 'inherit', env: Object.assign(process.env, { HOST: 'localhost', PORT: 8888 }) });
