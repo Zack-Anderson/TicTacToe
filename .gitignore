@@ -1,2 +1,3 @@
-.gitignore
-/bin/
+/node_modules/
+.classpath
+.project
